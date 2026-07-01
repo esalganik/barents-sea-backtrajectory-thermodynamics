@@ -64,7 +64,7 @@ where `T_f` is the seawater freezing temperature, `T_a` is ERA5 2-m air temperat
 Ice thickness is estimated using the empirical relation of Lebedev (1938):
 
 $$
-h_i\;(\mathrm{cm}) = 1.33 \times \mathrm{FDD}^{0.58}
+h_i = 1.33 \times \mathrm{FDD}^{0.58} \quad [\mathrm{cm}]
 $$
 
 where `FDD` is given in degree-Celsius days. The result is converted from cm to m before further calculations.
