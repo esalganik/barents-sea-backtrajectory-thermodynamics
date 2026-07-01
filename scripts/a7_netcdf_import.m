@@ -24,12 +24,12 @@ projectDir = 'C:\Users\evsalg001\Documents\MATLAB\Sonar Barents Sea';
 
 folder_moor = fullfile(projectDir,'data','raw','Nansen_Legacy_ULS_data');
 folder_out  = fullfile(projectDir,'figures');
-processedDir = fullfile(projectDir,'data','processed');
+exportDir = fullfile(projectDir,'export');
 
-modelFile_M1 = fullfile(processedDir, ...
+modelFile_M1 = fullfile(exportDir, ...
     'back_trajectories_M1_with_forcing_and_draft.nc');
 
-modelFile_M2 = fullfile(processedDir, ...
+modelFile_M2 = fullfile(exportDir, ...
     'back_trajectories_M2_with_forcing_and_draft.nc');
 
 files_M1 = {
