@@ -7,7 +7,6 @@ The workflow interpolates atmospheric and snow forcing onto M1 and M2 back-traje
 ## Repository structure
 
 ```text
-.
 ├── scripts/
 │   ├── a1_smlg_snow_to_trajectories.m
 │   ├── a2_era5_Ta_to_trajectories.m
