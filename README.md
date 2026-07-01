@@ -21,6 +21,7 @@ The workflow interpolates atmospheric and snow forcing onto M1 and M2 back-traje
 │   │   ├── ERA5/
 │   │   └── Nansen_Legacy_ULS_data/
 │   └── processed/
+├── export/
 ├── figures/
 └── README.md
 ```
