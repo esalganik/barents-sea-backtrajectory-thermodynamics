@@ -111,15 +111,15 @@ $$
 \mathrm{FDD} = \sum \max(T_f - T_a, 0)\Delta t
 $$
 
-where (T_f) is the seawater freezing temperature, (T_a) is ERA5 2-m air temperature, and (\Delta t) is the trajectory time step in days.
+where `T_f` is the seawater freezing temperature, `T_a` is ERA5 2-m air temperature, and `Δt` is the trajectory time step in days.
 
 Ice thickness is estimated using an empirical power-law relation:
 
 $$
-h_i = a , \mathrm{FDD}^{p}
+h_i = a \, \mathrm{FDD}^{p}
 $$
 
-where (a = 1.33) cm ((^\circ\mathrm{C},\mathrm{days})^{-p}) and (p = 0.58). The result is converted from cm to m.
+where `a = 1.33 cm (degC days)^-p` and `p = 0.58`. The result is converted from cm to m.
 
 Basal melt from ocean heat flux is calculated as:
 
@@ -127,7 +127,7 @@ $$
 \Delta h_\mathrm{melt} = \frac{Q_o \Delta t}{\rho_i L_f}
 $$
 
-where (Q_o) is the prescribed monthly ocean heat flux, (\rho_i = 900) kg m(^{-3}) is sea-ice density, and (L_f = 334000) J kg(^{-1}) is the latent heat of fusion.
+where `Q_o` is the prescribed monthly ocean heat flux, `ρ_i = 900 kg m^-3` is sea-ice density, and `L_f = 334000 J kg^-1` is the latent heat of fusion.
 
 In the FDD + OHF model, freezing increases the FDD-equivalent ice thickness, while ocean heat flux reduces the thickness by basal melt.
 
@@ -143,7 +143,7 @@ $$
 Q_\mathrm{atm} = \frac{T_f - T_a}{R}
 $$
 
-where (h_i) is ice thickness, (h_s) is SM-LG snow depth, (k_i = 2.03) W m(^{-1}) K(^{-1}) is the thermal conductivity of sea ice, and (k_s = 0.31) W m(^{-1}) K(^{-1}) is the thermal conductivity of snow.
+where `h_i` is ice thickness, `h_s` is SM-LG snow depth, `k_i = 2.03 W m^-1 K^-1` is the thermal conductivity of sea ice, and `k_s = 0.31 W m^-1 K^-1` is the thermal conductivity of snow.
 
 When air temperature is below the freezing point, ice growth is calculated as:
 
@@ -163,7 +163,7 @@ $$
 h_i(t+\Delta t) = \max(h_i(t) + \Delta h_\mathrm{growth} - \Delta h_\mathrm{melt}, 0)
 $$
 
-The initial ice thickness is set to (h_0 = 0.05) m, and a minimum conductive thickness of (h_\mathrm{min} = 0.02) m is used to avoid unrealistically small thermal resistance.
+The initial ice thickness is set to `h0 = 0.05 m`, and a minimum conductive thickness of `h_min = 0.02 m` is used to avoid unrealistically small thermal resistance.
 
 ### Draft conversion
 
