@@ -32,15 +32,16 @@ The scripts provide supporting analysis for estimating thermodynamic ice growth 
 
 Run the scripts in order:
 
-| Step | Script                                       | Purpose                                                             |
-| ---- | -------------------------------------------- | ------------------------------------------------------------------- |
-| 1    | `scripts/a1_smlg_snow_to_trajectories.m`     | Interpolate SM-LG snow depth onto back-trajectories                 |
-| 2    | `scripts/a2_era5_Ta_to_trajectories.m`       | Interpolate ERA5 2-m air temperature onto back-trajectories         |
-| 3    | `scripts/a3_fdd_from_era5.m`                 | Estimate ice thickness and draft using the FDD + OHF model          |
-| 4    | `scripts/a4_hi_from_hs_Ta.m`                 | Estimate ice thickness and draft using the thermal-resistance model |
-| 5    | `scripts/a5_plot_FDD_and_resistive_models.m` | Compare modelled draft with ULS draft observations                  |
-| 6    | `scripts/a6_netcdf_export.m`                 | Export compact sharable NetCDF files                                |
-| 7    | `scripts/a7_netcdf_import.m`                 | Recreate the final plot from exported NetCDF files                  |
+| Step | Script                                       | Purpose                                                                |
+| ---- | -------------------------------------------- | ---------------------------------------------------------------------- |
+| 1    | `scripts/a1_smlg_snow_to_trajectories.m`     | Interpolate SM-LG snow depth onto back-trajectories                    |
+| 2    | `scripts/a2_era5_Ta_to_trajectories.m`       | Interpolate ERA5 2-m air temperature onto back-trajectories            |
+| 3    | `scripts/a3_fdd_from_era5.m`                 | Estimate ice thickness and draft using the FDD + OHF model             |
+| 4    | `scripts/a4_hi_from_hs_Ta.m`                 | Estimate ice thickness and draft using the thermal-resistance model    |
+| 5    | `scripts/a5_plot_FDD_and_resistive_models.m` | Compare modelled draft with ULS draft observations                     |
+| 6    | `scripts/a6_netcdf_export.m`                 | Export compact sharable NetCDF files                                   |
+| 7    | `scripts/a7_netcdf_import.m`                 | Recreate the final plot from exported NetCDF files                     |
+| 8    | `scripts/a8_model_vs_uls.m`                  | Compare observed ULS draft with modelled draft using correlation plots |
 
 Main outputs:
 
@@ -54,6 +55,7 @@ export/back_trajectories_M1_with_forcing_and_draft.nc
 export/back_trajectories_M2_with_forcing_and_draft.nc
 
 figures/draft_pdf_M1_M2_with_FDD_and_thermal_draft.png
+figures/combined_M1_M2_obs_model_draft_correlations.png
 ```
 
 ## Thermodynamic models
