@@ -2,7 +2,16 @@
 
 MATLAB workflow for estimating sea-ice draft along Barents Sea back-trajectories using ERA5 air temperature, SM-LG snow depth, and simple thermodynamic growth models.
 
-The workflow interpolates forcing onto M1 and M2 back-trajectories, estimates ice thickness and draft, compares the estimates with ULS observations, and exports compact NetCDF files for sharing.
+The workflow interpolates forcing onto M1 and M2 back-trajectories, estimates ice thickness and draft, compares the estimates with ULS observations, and exports compact NetCDF files.
+
+## Associated manuscript
+
+This repository was developed to support the manuscript:
+
+**Springtime shifts from thin, locally formed sea ice to thick, imported ice in the northwestern Barents Sea**  
+Øyvind Foss, Samuel Brenner, Evgenii Salganik, Jack C. Landy, Arild Sundfjord, Sebastian Gerland, Hiroshi Sumata, and Mats A. Granskog.
+
+The scripts provide supporting analysis for estimating thermodynamic ice growth along sea-ice back-trajectories and comparing these estimates with moored ULS sea-ice draft observations from M1 and M2 in the northwestern Barents Sea.
 
 ## Repository structure
 
