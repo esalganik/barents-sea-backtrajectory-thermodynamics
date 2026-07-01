@@ -61,13 +61,13 @@ $$
 
 where `T_f` is the seawater freezing temperature, `T_a` is ERA5 2-m air temperature, and `Δt` is the trajectory time step in days.
 
-Ice thickness is estimated using an empirical power-law relation:
+Ice thickness is estimated using the empirical relation of Lebedev (1938):
 
 $$
-h_i = a , \mathrm{FDD}^{p}
+h_i\;(\mathrm{cm}) = 1.33 \times \mathrm{FDD}^{0.58}
 $$
 
-where `a = 1.33 cm (degC days)^-p` and `p = 0.58`.
+where `FDD` is given in degree-Celsius days. The result is converted from cm to m before further calculations.
 
 Basal melt from ocean heat flux is calculated as:
 
@@ -75,7 +75,7 @@ $$
 \Delta h_\mathrm{melt} = \frac{Q_o \Delta t}{\rho_i L_f}
 $$
 
-where `Q_o` is the prescribed monthly ocean heat flux, `ρ_i = 900 kg m^-3` is sea-ice density, and `L_f = 334000 J kg^-1` is the latent heat of fusion.
+where `Q_o` is the prescribed monthly ocean heat flux, taken from Krishfield et al. (2005; https://doi.org/10.1029/2004JC002293), `ρ_i = 900 kg m^-3` is sea-ice density, and `L_f = 334000 J kg^-1` is the latent heat of fusion.
 
 ### 2. Thermal-resistance model with SM-LG snow depth
 
